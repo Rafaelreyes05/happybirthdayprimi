@@ -7,24 +7,27 @@
     <title>Cumple Alexa</title>
     <style>
 
-        body{
-            background-color: #eaeaea;
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
         }
-        .image-container {
+        .container {
             display: flex;
+            flex-direction: column; /* Coloca los elementos en una columna */
             justify-content: center;
             align-items: center;
             margin: 50px;
             height: 600px; /* Ajusta esta altura según el diseño que prefieras */
         }
 
-        .image-container img {
-            
+        img {
             max-width: 100%;
-            max-height: 100%;
-            height: auto;
-            width: auto;
+            height: 500px;
         }
+
         /* Media Queries para dispositivos móviles */
         @media only screen and (max-width: 768px) {
             section {
@@ -65,8 +68,18 @@
                 height: auto;
             }
         }
-
-
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
 
     </style>
     
@@ -74,10 +87,11 @@
 
 <body>
 
-<section class="image-container">
+<div class="container">
     <!-- Aquí se mostrará la imagen -->
-    <img src="01 TARJETA ALEXA.jpg" alt="Tarjeta de Presentación de DANTOR Technologies">
-</section>
+    <img src="01 TARJETA ALEXA.jpg" alt="Tarjeta Alexa">
+    <button onclick="window.location.href='opengift.html'">Clic para ir a tu regalo</button>
+</div>
 
 </body>
 </html>

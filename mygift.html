@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: 500px;
+        }
+        /* Estilos para el contador cuadrado con fondo violeta */
+        #contador {
+            font-size: 2rem;
+            width: 100px;
+            height: 100px;
+            background-color: #9e56d6;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Imagen que cambiará después del contador -->
+        <img id="imagen" src="03 Regalo abierto.jpg" alt="Imagen inicial de la página 2">
+        <br>
+        <div id="contador">5</div>
+    </div>
+
+    <script>
+        // Contador regresivo
+        let contador = 5;
+        const contadorElemento = document.getElementById("contador");
+        const imagenElemento = document.getElementById("imagen");
+
+        const interval = setInterval(() => {
+            contador--;
+            contadorElemento.textContent = contador;
+
+            // Cuando el contador llega a 0, cambiar la imagen
+            if (contador === 0) {
+                clearInterval(interval); // Detener el contador
+                imagenElemento.src = "04 Regalo.jpg"; // Cambia la imagen
+            }
+        }, 1000); // Intervalo de 1 segundo
+    </script>
+
+</body>
+</html>
